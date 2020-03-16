@@ -22,7 +22,6 @@ export default function (props) {
         validationSchema: schema
     });
     function onSubmit(data) {
-
     }
     return(
         <div>
@@ -30,12 +29,12 @@ export default function (props) {
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
-                    <Form.Control name="userName" placeholder="please enter username"/>
+                    <Form.Control name="userName" placeholder="please enter username" ref={register}/>
                     {errors.userName && <p>please enter a valid username</p>}
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Password</Form.Label>
-                    <Form.Control name="password" placeholder="Please enter your Password"/>
+                    <Form.Control name="password" placeholder="Please enter your Password" ref={register}/>
                     {errors.password && <p>please enter a valid password</p>}
                 </Form.Group>
                 <Button type="submit">Log in</Button>
